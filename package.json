@@ -1,5 +1,5 @@
 {
-  "name": "sendcloud-email",
+  "name": "mail-sc.js",
   "version": "1.0.0",
   "description": "Direct Email based on Send-Cloud https://www.sendcloud.net/",
   "main": "index.js",
@@ -14,7 +14,9 @@
   "keywords": [
     "sendcloud",
     "email",
-    "sendclouder"
+    "sendclouder",
+    "mail-sc.js",
+    "mail-sc"
   ],
   "author": "danielsss",
   "license": "MIT",
