@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/danielsss/mail-sc.js.svg?branch=master)](https://travis-ci.org/danielsss/mail-sc.js)
 
-# Mail-sc.js
+# mail-sc.js
 
-Direct Email based on Send-Cloud https://www.sendcloud.net/
+To direct email based on SendCloud platform https://www.sendcloud.net/
+
+# documents
+* Preparing ...
