@@ -1,0 +1,6 @@
+coverage/
+*.fixture.js
+docs/
+node_modules/
+test/
+.nyc_output/

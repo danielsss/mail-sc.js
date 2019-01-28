@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "8"
+  - "9"
+  - "10"
+env:
+  - NODE_ENV="local"
+before_install:
+  - npm update -q
+install:
+  - npm i
+script:
+  - npm run lint
+  - npm run test

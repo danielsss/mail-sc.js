@@ -1,0 +1,43 @@
+{
+  "name": "sendcloud-email",
+  "version": "1.0.0",
+  "description": "Direct Email based on Send-Cloud https://www.sendcloud.net/",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsss/sendcloud-email.js.git"
+  },
+  "keywords": [
+    "sendcloud",
+    "email",
+    "sendclouder"
+  ],
+  "author": "danielsss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielsss/sendcloud-email.js/issues"
+  },
+  "homepage": "https://github.com/danielsss/sendcloud-email.js#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "debug": "^4.1.1",
+    "form-data": "^2.3.3",
+    "request": "^2.88.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "chai": "^4.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-daniels": "^1.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "sinon": "^7.2.3"
+  }
+}
