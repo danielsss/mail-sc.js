@@ -1,16 +1,28 @@
 'use strict';
 
-const Request = require('request');
 const SendCloudEmail = require('../');
 const expect = require('chai').expect;
 const sinon = require('sinon');
+
+let config = {};
+try {
+  config = require('../.config');
+} catch (e) {
+  console.error('local config not found then use global env');
+  console.error('import error:', e);
+}
+
+if (!config.apiKey) config.apiKey = process.env.API_KEY;
+if (!config.apiUser) config.apiUser = process.env.API_USER;
+if (!config.from) config.from = process.env.FROM;
+
 
 const options = {
   apiKey: 'fake.key',
   apiUser: 'fake.user',
 };
 
-describe('Sending Email Test', () => {
+describe('Deliveries Test', () => {
   it('should failed if given nothing', async () => {
     const sce = new SendCloudEmail(options);
     return await sce.deliver.send(null)
@@ -21,22 +33,7 @@ describe('Sending Email Test', () => {
       });
   });
 
-  it('should success with correct parameters', async () => {
-    let config = {};
-    try {
-      config = require('../.config.json');
-    } catch (e) {
-      this.post = sinon.stub(Request, 'post');
-      console.info('config file cannot load from local');
-      config.apiKey = 'fake.key';
-      config.apiUser = 'fake.user';
-      this.post.yields(null, {body: {
-        result: true,
-        statusCode: 200,
-        info: {emailIdList: []},
-      }}, null);
-    }
-
+  it('should call send() success with correct parameters', async () => {
     const sce = new SendCloudEmail(config);
     return await sce.deliver.send({
       to: 'better.sunjian@gmail.com',
@@ -50,5 +47,24 @@ describe('Sending Email Test', () => {
       sinon.restore();
       return null;
     });
+  });
+
+  it('should have an error if maillistTaskId does not given', async () => {
+    const sce = new SendCloudEmail(config);
+    return await sce.deliver.taskInfo({})
+      .catch(err => {
+        expect(err).to.be.an('error');
+        expect(err.message.startsWith('Missing maillistTaskId')).to.be.true;
+      });
+  });
+
+  it('should call taskInfo() success with correct parameters', async () => {
+    const sce = new SendCloudEmail(config);
+    return await sce.deliver.taskInfo({maillistTaskId: 1})
+      .then(res => {
+        expect(res.body).to.be.an('object');
+        expect(res.body).to.have.property('result');
+        expect(res.body).to.have.property('statusCode');
+      });
   });
 });
