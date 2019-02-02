@@ -11,21 +11,13 @@ const options = {
 };
 
 describe('Sending Email Test', () => {
-  
-  before(() => {
-    this.post = sinon.stub(Request, 'post');
-  });
-  
-  after(() => {
-    sinon.restore();
-  });
-  
   it('should failed if given nothing', async () => {
     const sce = new SendCloudEmail(options);
-    await sce.sender.send(null)
+    return await sce.deliver.send(null)
       .catch(e => {
         expect(e).to.be.an('error');
         expect(e.message.startsWith('opts must be an object')).to.be.true;
+        return null;
       });
   });
 
@@ -34,6 +26,7 @@ describe('Sending Email Test', () => {
     try {
       config = require('../.config.json');
     } catch (e) {
+      this.post = sinon.stub(Request, 'post');
       console.info('config file cannot load from local');
       config.apiKey = 'fake.key';
       config.apiUser = 'fake.user';
@@ -43,8 +36,9 @@ describe('Sending Email Test', () => {
         info: {emailIdList: []},
       }}, null);
     }
+
     const sce = new SendCloudEmail(config);
-    return await sce.sender.send({
+    return await sce.deliver.send({
       to: 'better.sunjian@gmail.com',
       subject: 'sdk test mail',
       html: 'hello danielssssss !!! this is a test case from test code',
