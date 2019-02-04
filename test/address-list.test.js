@@ -6,7 +6,7 @@ const AddressList = require('../lib/addr.list');
 const SendCloud = require('..');
 const config = require('./fixtures/config');
 
-describe.only('Address List Test', () => {
+describe('Address List Test', () => {
   it('should have methods which is defined in schemas', async () => {
     const keys = Object.keys(addressListSchema);
     const sce = new SendCloud(config);
