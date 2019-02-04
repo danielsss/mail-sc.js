@@ -1,6 +1,7 @@
 'use strict';
 
 const Deliveries = require('./lib/deliveries');
+const AddressList = require('./lib/addr.list');
 const utils = require('./lib/utils');
 
 /**
@@ -25,6 +26,7 @@ class Entries {
       throw new Error('You must specify the apiUser.' + utils.help());
     }
     this.deliver = new Deliveries(opts);
+    this.addressList = new AddressList(opts);
   }
 }
 
