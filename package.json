@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielsss/sendcloud-email.js.git"
+    "url": "git+https://github.com/danielsss/mail-sc.js#readme"
   },
   "keywords": [
     "sendcloud",
@@ -21,9 +21,9 @@
   "author": "danielsss",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielsss/sendcloud-email.js/issues"
+    "url": "https://github.com/danielsss/mail-sc.js#readme"
   },
-  "homepage": "https://github.com/danielsss/sendcloud-email.js#readme",
+  "homepage": "https://github.com/danielsss/mail-sc.js#readme",
   "dependencies": {
     "debug": "^4.1.1",
     "form-data": "^2.3.3",
