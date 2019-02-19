@@ -32,12 +32,17 @@ sendMessage();
 `proxy` - axios proxy [`default`: null]<br>
 `timeout` - axios timeout [`default`: 1000 * 6]<br>
 
-## Contents of SendCloud
+## methods of SendCloud
 
 + **.send(Object)** - [Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
 + **.sendTemplate(Object)** - [Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
 + **.sendCalendar(Object)** - [Send meeting calendar](http://www.sendcloud.net/doc/en/email_v2/send_email/#send-meeting-calendar)
 + **.taskInfo(Object)** - [List task info](http://www.sendcloud.net/doc/en/email_v2/send_email/#http-request-method)
++ **.batchQuery(Object)** - [Basic information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
++ **.query(Object)** - [Detailed information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query)
++ **.add(Object)** - [Adding template to sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#add)
++ **.delete(Object)** - [Deleting email template from sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
++ **.modification(Object)** - [Name, content, subject and type of the template can be modified.](http://www.sendcloud.net/doc/en/email_v2/template_do/#modification)
 
 
 ## LICENCE
