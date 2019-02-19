@@ -1,6 +1,6 @@
 {
   "name": "mail-sc.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Email sdk based on Send-Cloud https://www.sendcloud.net/",
   "main": "lib/index.js",
   "scripts": {
