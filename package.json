@@ -10,7 +10,7 @@
     "doc": "node scripts/doc.js",
     "append": "cat docs/contents.md >> README.md",
     "coveralls": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --colors test/*.test.js",
-    "coverage": "cat ./coverage/lcov.info | coveralls",
+    "coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
