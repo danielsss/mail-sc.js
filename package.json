@@ -6,7 +6,9 @@
   "scripts": {
     "test": "nyc mocha",
     "lint": "eslint .",
-    "fix": "node_modules/.bin/eslint . --fix"
+    "fix": "node_modules/.bin/eslint . --fix",
+    "doc": "node scripts/doc.js",
+    "append": "cat docs/contents.md >> README.md"
   },
   "repository": {
     "type": "git",
