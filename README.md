@@ -32,7 +32,7 @@ sendMessage();
 `proxy` - axios proxy [`default`: null]<br>
 `timeout` - axios timeout [`default`: 1000 * 6]<br>
 
-## methods of SendCloud
+## Methods of SendCloud
 
 + **.send(Object)** - [Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
 + **.sendTemplate(Object)** - [Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
