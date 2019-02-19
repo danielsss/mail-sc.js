@@ -21,9 +21,20 @@ const sendMessage = async () => {
 sendMessage();
 ```
 
-## Contents of package
+## Options of SendCloud
 
-#### SendCloud
+* `apiKey` - The send cloud apiKey
+* `apiUser` - The send cloud apiUser
+* `host` - The hostname of send cloud api `default`: api.sendcloud.net
+* `protocol` - http|https `default`: http
+* `port` - `default`: 80
+* `retry` - `default`: 1
+
+* `proxy` - axios proxy `default`: null
+* `timeout` - axios timeout `default`: 1000 * 6
+
+## Contents of SendCloud
+
 + **.send(Object)** - [Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
 + **.sendTemplate(Object)** - [Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
 + **.sendCalendar(Object)** - [Send meeting calendar](http://www.sendcloud.net/doc/en/email_v2/send_email/#send-meeting-calendar)
