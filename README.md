@@ -23,15 +23,14 @@ sendMessage();
 
 ## Options of SendCloud
 
-* `apiKey` - The send cloud apiKey
-* `apiUser` - The send cloud apiUser
-* `host` - The hostname of send cloud api `default`: api.sendcloud.net
-* `protocol` - http|https `default`: http
-* `port` - `default`: 80
-* `retry` - `default`: 1
-
-* `proxy` - axios proxy `default`: null
-* `timeout` - axios timeout `default`: 1000 * 6
+`apiKey` - The send cloud apiKey
+`apiUser` - The send cloud apiUser
+`host` - The hostname of send cloud api `default`: api.sendcloud.net
+`protocol` - http|https `default`: http
+`port` - `default`: 80
+`retry` - `default`: 1
+`proxy` - axios proxy `default`: null
+`timeout` - axios timeout `default`: 1000 * 6
 
 ## Contents of SendCloud
 
