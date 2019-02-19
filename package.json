@@ -8,7 +8,9 @@
     "lint": "eslint .",
     "fix": "node_modules/.bin/eslint . --fix",
     "doc": "node scripts/doc.js",
-    "append": "cat docs/contents.md >> README.md"
+    "append": "cat docs/contents.md >> README.md",
+    "coveralls": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --colors test/*.test.js",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,8 @@
     "chai": "^4.2.0",
     "eslint": "^5.12.1",
     "eslint-config-daniels": "^1.1.0",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "sinon": "^7.2.3"

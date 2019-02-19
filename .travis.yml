@@ -12,3 +12,7 @@ install:
 script:
   - npm run lint
   - npm run test
+  - npm run coveralls
+after_script:
+  - npm run coverage
+  - cat ./coverage/lcov.info | codacy-coverage --accountToken COVERALLS_TOKEN --username COVERALLS_USERNAME --projectName mail-sc.js
