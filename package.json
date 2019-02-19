@@ -1,11 +1,12 @@
 {
   "name": "mail-sc.js",
   "version": "1.0.2",
-  "description": "Direct Email based on Send-Cloud https://www.sendcloud.net/",
-  "main": "index.js",
+  "description": "Email sdk based on Send-Cloud https://www.sendcloud.net/",
+  "main": "lib/index.js",
   "scripts": {
     "test": "nyc mocha",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "fix": "node_modules/.bin/eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -18,18 +19,9 @@
     "mail-sc.js",
     "mail-sc"
   ],
-  "author": "danielsss",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/danielsss/mail-sc.js#readme"
-  },
-  "homepage": "https://github.com/danielsss/mail-sc.js#readme",
   "dependencies": {
-    "debug": "^4.1.1",
-    "form-data": "^2.3.3",
-    "kind-of": "^6.0.2",
-    "request": "^2.88.0",
-    "validator": "^10.11.0"
+    "axios": "^0.18.0",
+    "debug": "^4.1.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -41,5 +33,11 @@
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "sinon": "^7.2.3"
-  }
+  },
+  "homepage": "https://github.com/danielsss/mail-sc.js#readme",
+  "bugs": {
+    "url": "https://github.com/danielsss/mail-sc.js#readme"
+  },
+  "author": "danielsss",
+  "license": "MIT"
 }
