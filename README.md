@@ -1,14 +1,13 @@
 [![Build Status](https://travis-ci.org/danielsss/mail-sc.js.svg?branch=master)](https://travis-ci.org/danielsss/mail-sc.js)
 
-# mail-sc.js
-To direct email based on SendCloud platform https://www.sendcloud.net/
+A wrapped email sdk for [SendCloud](https://www.sendcloud.net) 
 
-# Install
+## Installation
 ```shell
 npm i --save mail-sc.js
 ```
 
-# How to use ?
+## How to use ?
 ```js
 const SendCloud = require('mail-sc.js');
 const options = {apiKey: 'your key', apiUser: 'your user'};
@@ -22,7 +21,7 @@ const sendMessage = async () => {
 sendMessage();
 ```
 
-# Contents of package
+## Contents of package
 
 #### SendCloud
 + **.send(Object)** - [Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
