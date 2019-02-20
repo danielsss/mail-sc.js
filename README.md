@@ -1,8 +1,18 @@
+# mail-sc.js
+
 [![Build Status](https://travis-ci.org/danielsss/mail-sc.js.svg?branch=master)](https://travis-ci.org/danielsss/mail-sc.js)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/070f009b8eab447b83b6b3ab2ef8b531)](https://www.codacy.com/app/danielsss/mail-sc.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danielsss/mail-sc.js&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/070f009b8eab447b83b6b3ab2ef8b531)](https://www.codacy.com/app/danielsss/mail-sc.js?utm_source=github.com&utm_medium=referral&utm_content=danielsss/mail-sc.js&utm_campaign=Badge_Coverage)
 
 A wrapped email sdk for [SendCloud](https://www.sendcloud.net) 
+
+## Requirements
+* Node.js > v7.0.*
+
+## Dependencies
+* axios
+* debug
+
 
 ## Installation
 ```shell
@@ -70,19 +80,19 @@ sendMessage();
 - [x] Deliveries
 - [x] Email Template
 - [x] Address List
-- [] Email Label
-- [] Domain
-- [] API_USER
-- [] User Information
-- [] Statistics
-- [] Delivery Response
-- [] Bounce List Management
-- [] Unsubscribe Management
-- [] Spam Report Management
-- [] Lists of Opens And Clicks Management
+- [ ] Email Label
+- [ ] Domain
+- [ ] API_USER
+- [ ] User Information
+- [ ] Statistics
+- [ ] Delivery Response
+- [ ] Bounce List Management
+- [ ] Unsubscribe Management
+- [ ] Spam Report Management
+- [ ] Lists of Opens And Clicks Management
 
 #### Build-in utilities
-- [] .addressesParser() - Normalizing email address list or email string list 
+- [ ] .addressesParser() - Normalizing email address list or email string list 
 
 ## LICENCE
 MIT License
