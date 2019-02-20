@@ -7,7 +7,7 @@ A wrapped email sdk for [SendCloud](https://www.sendcloud.net)
 npm i --save mail-sc.js
 ```
 
-## How to use ?
+## Usage
 ```js
 const SendCloud = require('mail-sc.js');
 const options = {apiKey: 'your key', apiUser: 'your user'};
@@ -25,27 +25,27 @@ sendMessage();
 
 `apiKey` - The send cloud apiKey<br>
 `apiUser` - The send cloud apiUser<br>
-`host` - The hostname of send cloud api [`default`: api.sendcloud.net]<br>
-`protocol` - http|https [`default`: http]<br>
-`port` - [`default`: 80]<br>
-`retry` - [`default`: 1]<br>
-`proxy` - axios proxy [`default`: null]<br>
-`timeout` - axios timeout [`default`: 1000 * 6]<br>
+`host` - The hostname of send cloud api \[`default`: api.sendcloud.net]<br>
+`protocol` - http|https \[`default`: http]<br>
+`port` - \[`default`: 80]<br>
+`retry` - \[`default`: 1]<br>
+`proxy` - axios proxy \[`default`: null]<br>
+`timeout` - axios timeout \[`default`: 1000 * 6]<br>
 
 ## Methods of SendCloud
 
 #### Deliveries
-+ **.send(Object)** - [Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
-+ **.sendTemplate(Object)** - [Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
-+ **.sendCalendar(Object)** - [Send meeting calendar](http://www.sendcloud.net/doc/en/email_v2/send_email/#send-meeting-calendar)
-+ **.taskInfo(Object)** - [List task info](http://www.sendcloud.net/doc/en/email_v2/send_email/#http-request-method)
++ **.send(Object)** -   [Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
++ **.sendTemplate(Object)** -   [Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
++ **.sendCalendar(Object)** -   [Send meeting calendar](http://www.sendcloud.net/doc/en/email_v2/send_email/#send-meeting-calendar)
++ **.taskInfo(Object)** -   [List task info](http://www.sendcloud.net/doc/en/email_v2/send_email/#http-request-method)
 
 #### Email Template
-+ **.batchQuery(Object)** - [Basic information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
-+ **.query(Object)** - [Detailed information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query)
-+ **.add(Object)** - [Adding template to sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#add)
-+ **.delete(Object)** - [Deleting email template from sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
-+ **.modification(Object)** - [Name, content, subject and type of the template can be modified.](http://www.sendcloud.net/doc/en/email_v2/template_do/#modification)
++ **.batchQuery(Object)**   -   [Basic information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
++ **.query(Object)**    -   [Detailed information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query)
++ **.add(Object)**  -   [Adding template to sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#add)
++ **.delete(Object)**   -   [Deleting email template from sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
++ **.modification(Object)** -   [Name, content, subject and type of the template can be modified.](http://www.sendcloud.net/doc/en/email_v2/template_do/#modification)
 
 
 ## LICENCE

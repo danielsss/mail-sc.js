@@ -29,7 +29,7 @@ const builder = async function() {
     for (const key in schema) {
       if (!schema.hasOwnProperty(key)) continue;
       const helper = `[${schema[key].desc}](${schema[key].doc})`;
-      contents += `+ **.${key}(Object)** - ${helper}\n`;
+      contents += `+ **.${key}(Object)**\t-\t${helper}\n`;
     }
   }
 
