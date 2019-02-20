@@ -10,6 +10,14 @@ const {existsSync} = require('fs');
 const SCHEMA_DIR = path.join(__dirname, '../lib/schemas/');
 const OUTPUT = path.join(__dirname, '../docs/contents.md');
 
+const getModuleName = function(filename) {
+  return {
+    'deliveries.js': 'delivery',
+    'address.list.js': 'addressList',
+    'email.template.js': 'template',
+  }[filename];
+};
+
 const builder = async function() {
   const schemas = [];
   const directories = await fs.readdir(SCHEMA_DIR);
@@ -18,18 +26,29 @@ const builder = async function() {
     try {
       const absolutePath = path.join(SCHEMA_DIR, filename);
       debug('require(%s)', absolutePath);
-      schemas.push(require(absolutePath));
+      schemas.push({content: require(absolutePath), moduleName: getModuleName(filename)});
     } catch (e) {
       console.error(e);
     }
   }
 
   let contents = '#### SendCloud\n';
-  for (const schema of schemas) {
+  for (const schemaObject of schemas) {
+    const schema = schemaObject.content;
     for (const key in schema) {
       if (!schema.hasOwnProperty(key)) continue;
       const helper = `[${schema[key].desc}](${schema[key].doc})`;
-      contents += `+ **.${key}(Object)**\t-\t${helper}\n`;
+      contents += `+ **.${key}(Object)}**\t-\t${helper}\n`;
+    }
+  }
+  
+  contents += '\n\n#### Aliases\n';
+  for (const schemaObject of schemas) {
+    const schema = schemaObject.content;
+    const moduleName = schemaObject.moduleName;
+    for (const key in schema) {
+      if (!schema.hasOwnProperty(key)) continue;
+      contents += `+ **${moduleName}.${schema[key].alias}(Object)}**\n`;
     }
   }
 

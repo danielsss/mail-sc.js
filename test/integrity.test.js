@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const SendCloud = require('../');
+const {SendCloud, createClient} = require('../');
 const deliveries = require('../lib/schemas/deliveries');
 const emailTemplate = require('../lib/schemas/email.template');
 const addressList = require('../lib/schemas/address.list');
@@ -27,4 +27,13 @@ describe('Integrity Test', () => {
       });
     }
   }
+  
+  const client = createClient(options);
+  it('client should have some proxy properties', async () => {
+    expect(client).to.have.property('delivery');
+    expect(client).to.have.property('template');
+    expect(client).to.have.property('addressList');
+  });
+  
+  
 });

@@ -1,19 +1,40 @@
 #### SendCloud
-+ **.batchQueryAddressList(Object)**	-	[Query address list (batch query)](http://www.sendcloud.net/doc/en/email_v2/list_do/)
-+ **.addAddressList(Object)**	-	[Adding address to list](http://www.sendcloud.net/doc/en/email_v2/list_do/#add-address-list)
-+ **.deleteAddressList(Object)**	-	[Deleting address list](http://www.sendcloud.net/doc/en/email_v2/list_do/#delete-address-list)
-+ **.modifyAddressList(Object)**	-	[Modify address list or update address list](http://www.sendcloud.net/doc/en/email_v2/list_do/#modify-address-list)
-+ **.batchQueryListMember(Object)**	-	[Query list member (batch query)](http://www.sendcloud.net/doc/en/email_v2/list_do/#query-list-member-batch-query)
-+ **.queryListMember(Object)**	-	[Query list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#query-list-member)
-+ **.addListMember(Object)**	-	[Add list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#add-list-member)
-+ **.modifyListMember(Object)**	-	[Modify list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#modify-list-member)
-+ **.deleteListMember(Object)**	-	[Delete list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#delete-list-member)
-+ **.send(Object)**	-	[Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
-+ **.sendTemplate(Object)**	-	[Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
-+ **.sendCalendar(Object)**	-	[Send meeting calendar](http://www.sendcloud.net/doc/en/email_v2/send_email/#send-meeting-calendar)
-+ **.taskInfo(Object)**	-	[List task info](http://www.sendcloud.net/doc/en/email_v2/send_email/#http-request-method)
-+ **.batchQuery(Object)**	-	[Basic information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
-+ **.query(Object)**	-	[Detailed information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query)
-+ **.add(Object)**	-	[Adding template to sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#add)
-+ **.delete(Object)**	-	[Deleting email template from sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
-+ **.modification(Object)**	-	[Name, content, subject and type of the template can be modified.](http://www.sendcloud.net/doc/en/email_v2/template_do/#modification)
++ **.batchQueryAddressList(Object)}**	-	[Query address list (batch query)](http://www.sendcloud.net/doc/en/email_v2/list_do/)
++ **.addAddressList(Object)}**	-	[Adding address to list](http://www.sendcloud.net/doc/en/email_v2/list_do/#add-address-list)
++ **.deleteAddressList(Object)}**	-	[Deleting address list](http://www.sendcloud.net/doc/en/email_v2/list_do/#delete-address-list)
++ **.modifyAddressList(Object)}**	-	[Modify address list or update address list](http://www.sendcloud.net/doc/en/email_v2/list_do/#modify-address-list)
++ **.batchQueryListMember(Object)}**	-	[Query list member (batch query)](http://www.sendcloud.net/doc/en/email_v2/list_do/#query-list-member-batch-query)
++ **.queryListMember(Object)}**	-	[Query list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#query-list-member)
++ **.addListMember(Object)}**	-	[Add list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#add-list-member)
++ **.modifyListMember(Object)}**	-	[Modify list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#modify-list-member)
++ **.deleteListMember(Object)}**	-	[Delete list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#delete-list-member)
++ **.send(Object)}**	-	[Regular delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#regular-delivery)
++ **.sendTemplate(Object)}**	-	[Template delivery](http://www.sendcloud.net/doc/en/email_v2/send_email/#template-delivery)
++ **.sendCalendar(Object)}**	-	[Send meeting calendar](http://www.sendcloud.net/doc/en/email_v2/send_email/#send-meeting-calendar)
++ **.taskInfo(Object)}**	-	[List task info](http://www.sendcloud.net/doc/en/email_v2/send_email/#http-request-method)
++ **.batchQuery(Object)}**	-	[Basic information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
++ **.query(Object)}**	-	[Detailed information of returned email template](http://www.sendcloud.net/doc/en/email_v2/template_do/#query)
++ **.add(Object)}**	-	[Adding template to sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#add)
++ **.delete(Object)}**	-	[Deleting email template from sendCloud](http://www.sendcloud.net/doc/en/email_v2/template_do/#query-batch-query)
++ **.modification(Object)}**	-	[Name, content, subject and type of the template can be modified.](http://www.sendcloud.net/doc/en/email_v2/template_do/#modification)
+
+
+#### Aliases
++ **addressList.batchQueryAddress(Object)}**
++ **addressList.addAddress(Object)}**
++ **addressList.deleteAddress(Object)}**
++ **addressList.updateAddress(Object)}**
++ **addressList.batchQueryMember(Object)}**
++ **addressList.queryMember(Object)}**
++ **addressList.addMember(Object)}**
++ **addressList.updateMember(Object)}**
++ **addressList.deleteMember(Object)}**
++ **delivery.send(Object)}**
++ **delivery.sendTemplate(Object)}**
++ **delivery.sendCalendar(Object)}**
++ **delivery.taskInfo(Object)}**
++ **template.batchQuery(Object)}**
++ **template.query(Object)}**
++ **template.add(Object)}**
++ **template.delete(Object)}**
++ **template.update(Object)}**

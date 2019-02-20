@@ -22,8 +22,23 @@ npm i --save mail-sc.js
 ```
 
 ## Usage
+
+#### Example 1: [Recommended. See APIs](#aliases)
 ```js
-const SendCloud = require('mail-sc.js');
+const {createClient} = require('mail-sc.js');
+const options = {apiKey: 'your key', apiUser: 'your user'};
+const sendCloud = createClient(options);
+
+const message = {from: '', to: '', subject: '', text: ''};
+const sendMessage = async () => {
+  return await sendCloud.delivery.send(message);
+}
+sendMessage();
+```
+
+#### Example 2
+```js
+const {SendCloud} = require('mail-sc.js');
 const options = {apiKey: 'your key', apiUser: 'your user'};
 const sendCloud = new SendCloud(options);
 
@@ -74,6 +89,37 @@ sendMessage();
 + **.addListMember(Object)**	-	[Add list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#add-list-member)
 + **.modifyListMember(Object)**	-	[Modify list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#modify-list-member)
 + **.deleteListMember(Object)**	-	[Delete list member](http://www.sendcloud.net/doc/en/email_v2/list_do/#delete-list-member)
+
+## Aliases
+* all the method's parameter same to [here](#sendcloud-methods)
+
+#### Deliveries
+
++ **delivery.send(Object)}**
++ **delivery.sendTemplate(Object)}**
++ **delivery.sendCalendar(Object)}**
++ **delivery.taskInfo(Object)}**
+
+#### Email Template
+
++ **template.batchQuery(Object)}**
++ **template.query(Object)}**
++ **template.add(Object)}**
++ **template.delete(Object)}**
++ **template.update(Object)}**
+
+#### Address List
+
++ **addressList.batchQueryAddress(Object)}**
++ **addressList.addAddress(Object)}**
++ **addressList.deleteAddress(Object)}**
++ **addressList.updateAddress(Object)}**
++ **addressList.batchQueryMember(Object)}**
++ **addressList.queryMember(Object)}**
++ **addressList.addMember(Object)}**
++ **addressList.updateMember(Object)}**
++ **addressList.deleteMember(Object)}**
+
 
 
 ## Planning implementations
