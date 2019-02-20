@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/070f009b8eab447b83b6b3ab2ef8b531)](https://www.codacy.com/app/danielsss/mail-sc.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danielsss/mail-sc.js&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/danielsss/mail-sc.js.svg?branch=master)](https://travis-ci.org/danielsss/mail-sc.js)
 
 A wrapped email sdk for [SendCloud](https://www.sendcloud.net) 

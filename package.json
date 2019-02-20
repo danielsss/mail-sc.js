@@ -9,7 +9,7 @@
     "fix": "node_modules/.bin/eslint . --fix",
     "doc": "node scripts/doc.js",
     "append": "cat docs/contents.md >> README.md",
-    "codacy-coverage": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | codacy-coverage && rm -rf ./coverage"
+    "codacy-coverage": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | codacy-coverage --username danielsss --projectName mail-sc.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
