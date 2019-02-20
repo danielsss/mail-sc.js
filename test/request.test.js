@@ -37,17 +37,9 @@ describe('Request Test', () => {
   });
   
   it('should got ReferenceError if does not found property', async () => {
-    const options = {
-      from: 'support@test.com',
-      to: 'test@test.com',
-      subject: 'test subject',
-      text: 'test text'
-    };
-  
     const client = createClient({apiKey: 'fake', apiUser: 'fake'});
-    
     try {
-      await client.delivery.batchQueryListMember();
+      await client.a.batchQueryListMember();
     } catch (e) {
       expect(e).to.be.an('error');
     }
