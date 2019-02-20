@@ -6,6 +6,8 @@
 
 A wrapped email sdk for [SendCloud](https://www.sendcloud.net) 
 
+Welcome PRs.
+
 ## Requirements
 * Node.js > v7.0.*
 
