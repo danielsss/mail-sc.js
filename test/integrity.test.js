@@ -4,6 +4,14 @@ const expect = require('chai').expect;
 const SendCloud = require('../');
 const deliveries = require('../lib/schemas/deliveries');
 const emailTemplate = require('../lib/schemas/email.template');
+const addressList = require('../lib/schemas/address.list');
+
+
+const schemas = [
+  deliveries,
+  emailTemplate,
+  addressList,
+];
 
 describe('Integrity Test', () => {
   const options = {
@@ -11,17 +19,12 @@ describe('Integrity Test', () => {
     apiUser: 'fake'
   };
   const sendCloud = new SendCloud(options);
-  for (const name in deliveries) {
-    it('SendCloud instance should have method: ' + name, async () => {
-      expect(sendCloud).to.have.property(name).that.to.be.an('function');
-      expect(SendCloud.prototype).to.have.property(name).that.to.be.an('function');
-    });
-  }
-
-  for (const name in emailTemplate) {
-    it('SendCloud instance should have method ' + name, async () => {
-      expect(sendCloud).to.have.property(name).that.to.be.an('function');
-      expect(SendCloud.prototype).to.have.property(name).that.to.be.an('function');
-    });
+  for (const schema of schemas) {
+    for (const name in schema) {
+      it('SendCloud should have method: ' + name, async () => {
+        expect(sendCloud).to.have.property(name).that.to.be.an('function');
+        expect(SendCloud.prototype).to.have.property(name).that.to.be.an('function');
+      });
+    }
   }
 });
