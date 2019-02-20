@@ -12,7 +12,7 @@ export interface Template {
   query(options: Options): Promise<any>;
   add(options: Options): Promise<any>;
   delete(options: Options): Promise<any>;
-  modification(options: Options): Promise<any>;
+  update(options: Options): Promise<any>;
 }
 
 export interface AddressList {
