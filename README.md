@@ -35,7 +35,7 @@ const sendMessage = async () => {
 sendMessage();
 ```
 
-## Options of SendCloud
+## SendCloud Options
 
 `apiKey` - The send cloud apiKey<br>
 `apiUser` - The send cloud apiUser<br>
@@ -46,7 +46,7 @@ sendMessage();
 `proxy` - axios proxy \[`default`: null]<br>
 `timeout` - axios timeout \[`default`: 1000 * 6]<br>
 
-## Methods of SendCloud
+## SendCloud Methods 
 
 #### Deliveries
 
