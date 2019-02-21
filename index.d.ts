@@ -48,4 +48,6 @@ export class SendCloud {
   public addressList: AddressList;
 }
 
+export function decomposeAddress(address: string): {name: string, address: string};
+export function addressParser(addresses: string | string[], tag: string): string;
 export default function createClient(options: SendCouldStaticOptions): SendCloud;

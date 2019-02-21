@@ -25,11 +25,31 @@ npm i --save mail-sc.js
 
 #### Example 1: [Recommended. See APIs](#aliases)
 ```js
-const {createClient} = require('mail-sc.js');
+const {
+  createClient, decomposeAddress, addressParser
+} = require('mail-sc.js');
 const options = {apiKey: 'your key', apiUser: 'your user'};
 const sendCloud = createClient(options);
 
-const message = {from: '', to: '', subject: '', text: ''};
+const address = 'tester<test_address@test.com>';
+const decomposed = decomposeAddress(address);
+
+const addr1 = ['test1@test.com', 'test2@test.com'];
+const addr2 = 'test1@test.com, test2@test.com,         test3@test.com';
+
+console.log(addressParser(addr1));
+// 'test1@test.com;test2@test.com'
+
+console.log(addressParser(addr2, ','));
+// 'test1@test.com;test2@test.com;test3@test.com'
+
+const message = {
+  from: decomposed.address,
+  fromName: decomposed.name,
+  to: 'test1@test,com',
+  subject: 'test subject',
+  html: 'test message'
+};
 const sendMessage = async () => {
   return await sendCloud.delivery.send(message);
 }
@@ -38,11 +58,22 @@ sendMessage();
 
 #### Example 2
 ```js
-const {SendCloud} = require('mail-sc.js');
+const {
+  SendCloud, decomposeAddress
+} = require('mail-sc.js');
 const options = {apiKey: 'your key', apiUser: 'your user'};
 const sendCloud = new SendCloud(options);
 
-const message = {from: '', to: '', subject: '', text: ''};
+const address = 'tester<test_address@test.com>';
+const decomposed = decomposeAddress(address);
+
+const message = {
+  from: decomposed.address,
+  fromName: decomposed.name,
+  to: 'test1@test,com',
+  subject: 'test subject',
+  html: 'test message'
+};
 const sendMessage = async () => {
   return await sendCloud.send(message);
 }
@@ -140,7 +171,8 @@ sendMessage();
 - [ ] Lists of Opens And Clicks Management
 
 #### Build-in utilities
-- [ ] .addressesParser() - Normalizing email address list or email string list 
+- [x] .addressParser(addresses) - Normalizing email address list or email string list
+- [x] .decomposeAddress(address) - Decomposing an email address into fromName & address 
 
 ## LICENCE
 MIT License
