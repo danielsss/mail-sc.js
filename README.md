@@ -171,8 +171,10 @@ sendMessage();
 - [ ] Lists of Opens And Clicks Management
 
 #### Build-in utilities
-- [x] .addressParser(addresses) - Normalizing email address list or email string list
+- [x] .addressParser(addresses, tag) - Normalizing email address list or email string list
 - [x] .decomposeAddress(address) - Decomposing an email address into fromName & address 
+
+* [See details for utilities usage](#example-1-recommended-see-apisaliases)
 
 ## LICENCE
 MIT License
