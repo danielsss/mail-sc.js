@@ -1,5 +1,10 @@
 type Options = object;
 
+export interface decomposeAddressResponse {
+  name: string;
+  address: string;
+}
+
 export interface Delivery {
   send(options: Options): Promise<any>;
   sendTemplate(options: Options): Promise<any>;
@@ -48,6 +53,6 @@ export class SendCloud {
   public addressList: AddressList;
 }
 
-export function decomposeAddress(address: string): {name: string, address: string};
+export function decomposeAddress(address: string): decomposeAddressResponse;
 export function addressParser(addresses: string | string[], tag: string): string;
 export default function createClient(options: SendCouldStaticOptions): SendCloud;
