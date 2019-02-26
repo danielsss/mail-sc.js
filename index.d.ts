@@ -1,5 +1,10 @@
 type Options = object;
 
+export interface decomposeAddressResponse {
+  name: string;
+  address: string;
+}
+
 export interface Delivery {
   send(options: Options): Promise<any>;
   sendTemplate(options: Options): Promise<any>;
@@ -30,6 +35,14 @@ export interface AddressList {
   deleteMember(options: Options): Promise<any>;
 }
 
+export interface EmailLabel {
+  add(optionds: Options): Promise<any>;
+  batchQuery(optionds: Options): Promise<any>;
+  delete(optionds: Options): Promise<any>;
+  getLabel(optionds: Options): Promise<any>;
+  update(optionds: Options): Promise<any>;
+}
+
 export interface SendCouldStaticOptions {
   apiUser: string;
   apiKey: string;
@@ -46,8 +59,9 @@ export class SendCloud {
   public delivery: Delivery;
   public template: Template;
   public addressList: AddressList;
+  public emailLabel: EmailLabel;
 }
 
-export function decomposeAddress(address: string): {name: string, address: string};
+export function decomposeAddress(address: string): decomposeAddressResponse;
 export function addressParser(addresses: string | string[], tag: string): string;
 export default function createClient(options: SendCouldStaticOptions): SendCloud;
