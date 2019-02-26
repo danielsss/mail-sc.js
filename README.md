@@ -92,7 +92,7 @@ sendMessage();
 * `proxy` - axios proxy \[`default`: null]
 * `timeout` - axios timeout \[`default`: 1000 * 6]
 
-## contents of `SendCloud`
+## Methods of `SendCloud`
 
 #### Deliveries
 
