@@ -15,6 +15,7 @@ const getModuleName = function(filename) {
     'deliveries.js': 'delivery',
     'address.list.js': 'addressList',
     'email.template.js': 'template',
+    'email.label.js': 'emailLabel',
   }[filename];
 };
 
@@ -33,14 +34,14 @@ const builder = async function() {
   }
 
   let contents = '#### SendCloud\n';
-  for (const schemaObject of schemas) {
-    const schema = schemaObject.content;
-    for (const key in schema) {
-      if (!schema.hasOwnProperty(key)) continue;
-      const helper = `[${schema[key].desc}](${schema[key].doc})`;
-      contents += `+ **.${key}(Object)}**\t-\t${helper}\n`;
-    }
-  }
+  // for (const schemaObject of schemas) {
+  //   const schema = schemaObject.content;
+  //   for (const key in schema) {
+  //     if (!schema.hasOwnProperty(key)) continue;
+  //     const helper = `[${schema[key].desc}](${schema[key].doc})`;
+  //     contents += `+ **.${key}(Object)}**\t-\t${helper}\n`;
+  //   }
+  // }
   
   contents += '\n\n#### Aliases\n';
   for (const schemaObject of schemas) {
@@ -48,7 +49,8 @@ const builder = async function() {
     const moduleName = schemaObject.moduleName;
     for (const key in schema) {
       if (!schema.hasOwnProperty(key)) continue;
-      contents += `+ **${moduleName}.${schema[key].alias}(Object)}**\n`;
+      const helper = `[${schema[key].desc}](${schema[key].doc})`;
+      contents += `+ **${moduleName}.${schema[key].alias}(Object)** - ${helper}\n`;
     }
   }
 
