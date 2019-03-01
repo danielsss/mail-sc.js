@@ -134,10 +134,10 @@ sendMessage();
 ## Planning implementations
 
 #### SendCloud APIs
-- [x] Deliveries
-- [x] Email Template
-- [x] Address List
-- [x] Email Label
+- [x] Deliveries - `2019-02-15`
+- [x] Email Template - `2019-02-21`
+- [x] Address List - `2019-02-21`
+- [x] Email Label - `2019-03-1`
 - [ ] Domain
 - [ ] API_USER
 - [ ] User Information
