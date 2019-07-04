@@ -107,7 +107,7 @@ describe('Request Test', () => {
       apiKey: 'fake',
       apiUser: 'fake',
       retry: 2,
-      host: 'api.sendcloudxxxx.net',
+      host: 'api.xxxx123xxxx.net',
       timeout: 1000,
     });
     const options = {
@@ -120,7 +120,8 @@ describe('Request Test', () => {
     try {
       await client.delivery.send(options);
     } catch (e) {
-      expect(e.code).to.equals('ENOTFOUND');
+      console.info(e);
+      expect(e.code).to.equals('ECONNRESET');
     }
   });
 });
