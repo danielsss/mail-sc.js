@@ -4,19 +4,22 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/070f009b8eab447b83b6b3ab2ef8b531)](https://www.codacy.com/app/danielsss/mail-sc.js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danielsss/mail-sc.js&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/070f009b8eab447b83b6b3ab2ef8b531)](https://www.codacy.com/app/danielsss/mail-sc.js?utm_source=github.com&utm_medium=referral&utm_content=danielsss/mail-sc.js&utm_campaign=Badge_Coverage)
 
-A wrapped email sdk for [SendCloud](https://www.sendcloud.net) 
+An Email SDK for [SendCloud](https://www.sendcloud.net) 
 
 Welcome PRs.
 
 ## Requirements
+
 * Node.js > v7.0.*
 
 ## Dependencies
+
 * axios
 * debug
 
 
 ## Installation
+
 ```shell
 npm i --save mail-sc.js
 ```
@@ -24,6 +27,7 @@ npm i --save mail-sc.js
 ## Usage
 
 #### Example 1: [Recommended. See APIs](#aliases)
+
 ```js
 const {
   createClient, decomposeAddress, addressParser
@@ -57,6 +61,7 @@ sendMessage();
 ```
 
 #### Example 2
+
 ```js
 const {
   SendCloud, decomposeAddress
@@ -157,7 +162,7 @@ sendMessage();
 ## LICENCE
 MIT License
 
-Copyright (c) 2018 Danielsss
+Copyright (c) 2019 Danielsss
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
